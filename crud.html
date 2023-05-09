@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team/Crud</title>
+    <link rel="stylesheet" href="assets/vendor/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css ">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+<!--custome css-->
+<link rel="stylesheet" href="crud.css">
+    </head>
+
+<body>
+
+    <div class="add-employee">
+        <div class="container">
+            <h1 id="crudmain">CRUD System</h1>
+            <form action="">
+                <div class="mb-3">
+                    <label for="">Employee name</label>
+                    <input class="inputs form-control" type="text" placeholder="Employee name" id="EmployeeName">
+                <div class="small text-danger " id="nameAlert"></div>
+                </div>
+                <label for="">Job</label>
+                <input class="inputs form-control" type="text" placeholder="Job" id="Job">
+                <div class="small text-danger" id="jobAlert"> Job should start with Capital</div>
+    
+                <label for=""> Price</label>
+                <input class="inputs form-control" type="number" placeholder="Price per hour" id="Price">
+                <div class="small text-danger" id="priceAlert"> Price between 100 and 999</div>
+    
+                <label for=""> Description</label>
+                <textarea class="inputs form-control" placeholder=" Description" id="Description"></textarea>
+                <div class="small text-danger" id="descAlert"> Describtion should start with Capital</div>
+
+                <label for="">Picture</label>
+                <input class="inputs form-control" type="text" placeholder="URL of the picture" id="Imag">
+          
+
+                <input type="submit" value="Add Employee" class="btn btn-outline-secondary mt-3" disabled id="click" />
+                <input type="submit" value="Update Employee" class="btn btn-outline-info mt-3" disabled id="update" />
+
+                <button class="btn btn-outline-secondary mt-3" type="reset">clear</button>
+            </form>
+        </div>
+        <div class="container">
+            <input type="search" placeholder="search by employee name..." id="search" class="form-control my-3">
+
+            
+                <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+                <div class="team">
+                    <div class="row" id="data">
+                        
+                        <div class="col-md-4 mb-5">
+                            <div class="card rounded-0 team-single">
+                                <div class="card-img">
+                                    <img  alt="picture of the employee" src="assets/imgs/about-v1-img1.jpg" onerror="this.onerror=null;this.src='https:cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
+                        
+                                </div>
+                                <div class="card-information position-relative">
+                                     <div class="social-links">
+                                        <ul class="list-unstyled ml-0">
+                                            <li> <a href=" "><i class="fa-brands fa-facebook-f"></i></a> </li>
+                                            <li> <a href=" "><i class="fa-brands fa-twitter"></i></a> </li>
+                                            <li> <a href=" "><i class="fa-brands fa-pinterest-p"></i></a> </li>
+                        
+                                        </ul>
+                                     </div>   
+                                     <span>Depression Psychology</span>
+                                     <h2>										Dr. Adam Kali																	</h2>       
+                                        <p>A beautifulcollection of clean
+                                            modern flexible Services</p> 
+                                            <p class="border"> Price is 50 $ per hour</p>           
+                                            <button class="btn"  > update </button> 
+                                            <button class="btn" > delete </button>
+                                                                      
+                                </div>
+                            </div>
+                        </div> 
+
+                </div>
+            
+        </div>
+    </div>
+    <!-- bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+        <!-- sweet alert -->
+       <script src="sweetalert2.min.js"></script>
+    <!-- custom js file -->
+    <script src="crud.js"></script>
+    <script src="assets/vendor/js/bootstrap.bundle.min.js"> </script>
+</body>
+</html>
